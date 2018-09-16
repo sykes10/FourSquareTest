@@ -1,0 +1,11 @@
+<div class="venue">
+  <div class="venue__name">{{index+1}}. {{data.name}}</div>
+  <div class="venue__location">
+    <div class="venue__address"><strong>address:</strong> {{data.location.address}}</div>
+    <div class="venue__address"><strong>city:</strong> {{data.location.city}}</div>
+  </div>
+  <div class="venue__category">
+    <div class="venue__category__name" *ngFor="let category of data.categories">{{category.name}}</div>
+  </div>
+
+</div>
