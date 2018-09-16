@@ -30,5 +30,12 @@ $margin: 8px;
     border: none;
     background-color: purple;
     color: white;
+    cursor: pointer;
+    &:hover {
+      background-color: lighten(purple, 10%);
+    }
+    &:active {
+      background-color: lighten(purple, 15%);
+    }
   }
 }
