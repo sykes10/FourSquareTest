@@ -10,12 +10,14 @@ import { SearchBarComponent } from './components/search-bar/search-bar.component
 
 // Custom Services
 import { SearchService } from './services/search.service';
+import { VenueItemComponent } from './components/venue-item/venue-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    VenueItemComponent
   ],
   imports: [
     BrowserModule,
