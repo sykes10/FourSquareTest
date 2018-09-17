@@ -1,0 +1,64 @@
+.venue {
+  background-color: #F5F5F5;
+  width: 30vw;
+  border-radius: 6px;
+  margin-bottom: 32px;
+  position: relative;
+
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 1200px) {
+    width: 40vw;
+  }
+
+  /* On screens that are 600px or less, set the background color to olive */
+  @media screen and (max-width: 900px) {
+    width: 90vw;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 12px;
+    padding: 16px 16px 0px 16px;
+
+  }
+
+  &__location {
+    margin-bottom: 16px;
+    padding: 0 16px;
+
+    &__icon {
+      margin-right: 12px;
+    }
+
+    &__address {
+      color: #676E76;
+      font-size: 14px;
+    }
+
+    display: flex;
+  }
+
+  &__category {
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #2766D0;
+    border-radius: 0px 0px 6px 6px;
+    &__image {
+      height: 24px;
+      width:24px;
+    }
+    &__item {
+      margin: 0 6px 0 10px;
+    }
+    &__name {
+      color: white;
+    }
+  }
+
+}

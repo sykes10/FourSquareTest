@@ -1,0 +1,6 @@
+<div class="body">
+  <and-search-bar (onSearch)="search($event)"></and-search-bar>
+  <div class="venue-container">
+    <and-venue-item *ngFor="let venue of venueList; let i = index" [data]="venue" [index]="i"></and-venue-item>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="venue">
+  <div class="venue__name">{{index+1}}. {{data.name}}</div>
+  <div class="venue__location">
+    <div class="venue__location__icon">
+        <i class="fas fa-map-marker-alt"></i>
+    </div>
+    <div class="venue__location__address">
+      <div class="venue__address">{{data.location.address ? data.location.address : 'Address' }}</div>
+      <div class="venue__address">{{data.location.city ? data.location.city : 'City'}} {{data.location.state ? data.location.state : 'State'}}</div>
+      <div class="venue__address">{{data.location.country ? data.location.country : ' Country'}}</div>
+    </div>
+  </div>
+  <div class="venue__category" *ngFor="let category of data.categories">
+    <div class="venue__category__item">
+      <img class="venue__category__image" [src]="getIconUrl(category.icon)">
+    </div>
+    <div class="venue__category__name" >{{category.name}}</div>
+  </div>
+
+</div>
