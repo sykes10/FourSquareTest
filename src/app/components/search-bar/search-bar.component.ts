@@ -18,4 +18,8 @@ export class SearchBarComponent {
     this.onSearch.emit(this.searchQuery);
   }
 
+  keyPressed(event) {
+    console.log(event)
+  }
+
 }
