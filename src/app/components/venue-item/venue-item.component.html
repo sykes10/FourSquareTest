@@ -10,11 +10,13 @@
       <div class="venue__address">{{data.location.country ? data.location.country : ' Country'}}</div>
     </div>
   </div>
-  <div class="venue__category" *ngFor="let category of data.categories">
+  <div class="venue__category" *ngFor="let category of data.categories" >
     <div class="venue__category__item">
       <img class="venue__category__image" [src]="getIconUrl(category.icon)">
     </div>
     <div class="venue__category__name" >{{category.name}}</div>
   </div>
-
+  <div class="venue__category" *ngIf="!data.categories.length > 0">
+      <div class="venue__category__name" >No Categories</div>
+  </div>
 </div>
