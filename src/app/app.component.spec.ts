@@ -1,13 +1,34 @@
 import { TestBed, async } from '@angular/core/testing';
-
+import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 
+// Components
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { VenueItemComponent } from './components/venue-item/venue-item.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+
+import { AbstractMockObservableService } from './services/mock.service';
+import { SearchService } from './services/search.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+
+class MockService extends AbstractMockObservableService {
+  doStuff() {
+    return this;
+  }
+}
+let mockService;
 describe('AppComponent', () => {
   beforeEach(async(() => {
+    mockService = new MockService();
     TestBed.configureTestingModule({
+      imports: [FormsModule],
       declarations: [
-        AppComponent
+        AppComponent,
+        SearchBarComponent,
+        VenueItemComponent,
+        SpinnerComponent
       ],
+      providers: [{provide: SearchService, useValue: mockService }, HttpClientModule, HttpClient]
     }).compileComponents();
   }));
 
@@ -17,16 +38,4 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
 
-  it(`should have as title 'app'`, async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('app');
-  }));
-
-  it('should render title in a h1 tag', async(() => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
-  }));
 });
