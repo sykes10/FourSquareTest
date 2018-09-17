@@ -1,5 +1,5 @@
 To run this project you have to run the following comands
-- npm install @angular/cli -g -s
+- npm install @angular/cli@latest -g -s
 - npm i 
 - ng serve -o
 
@@ -7,6 +7,7 @@ To run this project you have to run the following comands
 # A
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
+If you don't have it run npm install @angular/cli -s
 
 ## Development server
 
