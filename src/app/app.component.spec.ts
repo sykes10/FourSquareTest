@@ -1,8 +1,11 @@
 import { TestBed, async } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
+
+// Components
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { VenueItemComponent } from './components/venue-item/venue-item.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { AbstractMockObservableService } from './services/mock.service';
 import { SearchService } from './services/search.service';
@@ -22,7 +25,8 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         SearchBarComponent,
-        VenueItemComponent
+        VenueItemComponent,
+        SpinnerComponent
       ],
       providers: [{provide: SearchService, useValue: mockService }, HttpClientModule, HttpClient]
     }).compileComponents();
