@@ -11,7 +11,9 @@
     </div>
   </div>
   <div class="venue__category" *ngFor="let category of data.categories">
-    <img class="venue__category__item" [src]="getIconUrl(category.icon)" />
+    <div class="venue__category__item">
+      <img class="venue__category__image" [src]="getIconUrl(category.icon)">
+    </div>
     <div class="venue__category__name" >{{category.name}}</div>
   </div>
 
