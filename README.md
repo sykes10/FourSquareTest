@@ -1,3 +1,9 @@
+To run this project you have to run the following comands
+- npm install @angular/cli -g -s
+- npm i 
+- ng serve -o
+
+
 # A
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.3.
