@@ -1,0 +1,9 @@
+<div class="body">
+  <and-search-bar (onSearch)="search($event)"></and-search-bar>
+  <and-spinner *ngIf="loading; else content"></and-spinner>
+  <ng-template #content>
+    <div class="venue-container">
+      <and-venue-item *ngFor="let venue of venueList; let i = index" [data]="venue" [index]="i"></and-venue-item>
+    </div>
+  </ng-template>
+</div>
